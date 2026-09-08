@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Feliz Aniversário ❤️🎉</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            overflow: hidden;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+
+            font-family:
+                "Montserrat",
+                sans-serif;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    #8e2349 0%,
+                    #4c0d24 40%,
+                    #19050c 100%
+                );
+
+        }
+
+
+        .birthday {
+
+            position: relative;
+
+            z-index: 10;
+
+            padding: 30px;
+
+            animation:
+                appear
+                1s ease;
+
+        }
+
+
+        .emoji {
+
+            font-size:
+                clamp(45px, 8vw, 80px);
+
+            margin-bottom: 25px;
+
+        }
+
+
+        h1 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(55px, 11vw, 110px);
+
+            line-height: 0.9;
+
+            margin-bottom: 30px;
+
+            text-shadow:
+                0 10px 40px
+                rgba(255, 140, 180, 0.4);
+
+        }
+
+
+        p {
+
+            color: #ffd9e4;
+
+            margin-bottom: 40px;
+
+            font-size: 17px;
+
+        }
+
+
+        a {
+
+            display: inline-block;
+
+            padding:
+                17px 38px;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            color: white;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #c52f60,
+                    #e96f95
+                );
+
+            box-shadow:
+                0 15px 40px
+                rgba(220, 70, 120, 0.35);
+
+            transition:
+                0.3s;
+
+        }
+
+
+        a:hover {
+
+            transform:
+                translateY(-4px)
+                scale(1.05);
+
+        }
+
+
+        .heart {
+
+            position: fixed;
+
+            bottom: -40px;
+
+            pointer-events: none;
+
+            animation:
+                rise linear forwards;
+
+        }
+
+
+        @keyframes rise {
+
+            from {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+
+            15% {
+
+                opacity: 1;
+
+            }
+
+
+            to {
+
+                transform:
+                    translateY(-115vh)
+                    rotate(360deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+        @keyframes appear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    scale(0.8);
+
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    scale(1);
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="birthday">
+
+        <div class="emoji">
+            🎉💗🎂🎊💕
+        </div>
+
+
+        <h1>
+            FELIZ<br>
+            ANIVERSARIOOOOOO!!!
+        </h1>
+
+
+        <p>
+            ❤️ 🎉 💕 🎂 ✨ 🎊 ❤️
+        </p>
+
+
+        <a href="site.html">
+
+            Agora pode entrar ❤️
+
+        </a>
+
+    </div>
+
+
+    <script>
+
+        function createHeart() {
+
+            const heart =
+                document.createElement("div");
+
+
+            heart.className =
+                "heart";
+
+
+            const symbols = [
+
+                "♥",
+                "♡",
+                "💕",
+                "🎉",
+                "✨",
+                "🎊",
+                "💗"
+
+            ];
+
+
+            heart.textContent =
+                symbols[
+                    Math.floor(
+                        Math.random() *
+                        symbols.length
+                    )
+                ];
+
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+
+            heart.style.fontSize =
+                14 +
+                Math.random() * 28 +
+                "px";
+
+
+            heart.style.animationDuration =
+                6 +
+                Math.random() * 6 +
+                "s";
+
+
+            document.body.appendChild(
+                heart
+            );
+
+
+            setTimeout(
+                () => {
+
+                    heart.remove();
+
+                },
+
+                13000
+            );
+
+        }
+
+
+        setInterval(
+            createHeart,
+            250
+        );
+
+    </script>
+
+
+</body>
+
+</html>
