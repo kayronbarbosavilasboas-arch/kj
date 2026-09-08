@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nosso Calendário ❤️</title>
+
+    <link rel="stylesheet" href="kayron.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="glow glow-1"></div>
+
+        <div class="glow glow-2"></div>
+
+    </div>
+
+    <div id="hearts-container"></div>
+
+
+    <header class="header">
+
+        <a href="site.html" class="logo">
+
+            K <span>♥</span> J
+
+        </a>
+
+        <button class="menu-button" id="menuButton">
+
+            ☰
+
+        </button>
+
+        <nav class="navigation" id="navigation">
+
+            <a href="site.html">
+
+                Início
+
+            </a>
+
+            <a href="calendario.html" class="active">
+
+                Calendário
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="inner-page">
+
+
+        <section class="page-title">
+
+            <span>
+
+                NOSSOS DIAS
+
+            </span>
+
+            <h1>
+
+                Nosso calendário
+
+                <span>♥</span>
+
+            </h1>
+
+            <p>
+
+                Alguns dias são apenas dias.
+
+                Outros merecem ser lembrados.
+
+            </p>
+
+        </section>
+
+
+        <!-- CALENDÁRIO -->
+
+        <section class="calendar-box">
+
+
+            <div class="calendar-header">
+
+                <button id="previousMonth">
+
+                    ‹
+
+                </button>
+
+                <div>
+
+                    <h2 id="monthName">
+
+                        Setembro
+
+                    </h2>
+
+                    <span id="yearNumber">
+
+                        2026
+
+                    </span>
+
+                </div>
+
+                <button id="nextMonth">
+
+                    ›
+
+                </button>
+
+            </div>
+
+
+            <div class="weekdays">
+
+                <span>DOM</span>
+
+                <span>SEG</span>
+
+                <span>TER</span>
+
+                <span>QUA</span>
+
+                <span>QUI</span>
+
+                <span>SEX</span>
+
+                <span>SÁB</span>
+
+            </div>
+
+
+            <div class="calendar-grid" id="calendarGrid"></div>
+
+
+            <div class="calendar-legend">
+
+                <div>
+
+                    <i class="legend-special"></i>
+
+                    Data especial
+
+                </div>
+
+                <div>
+
+                    <i class="legend-today"></i>
+
+                    Hoje
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- DATAS -->
+
+        <section class="special-section">
+
+            <div class="section-heading">
+
+                <span>
+
+                    GUARDADAS COM CARINHO
+
+                </span>
+
+                <h2>
+
+                    Datas especiais
+
+                </h2>
+
+                <div class="heading-line">
+
+                    ♥
+
+                </div>
+
+            </div>
+
+
+            <div class="special-grid" id="specialGrid"></div>
+
+
+        </section>
+
+
+        <!-- MODAL -->
+
+        <div class="date-modal" id="dateModal">
+
+            <div class="modal-content">
+
+                <button class="modal-close" id="closeModal">
+
+                    ×
+
+                </button>
+
+                <div class="modal-icon" id="modalIcon">
+
+                    ♥
+
+                </div>
+
+                <span id="modalDate">
+
+                    DATA
+
+                </span>
+
+                <h2 id="modalTitle">
+
+                    Título
+
+                </h2>
+
+                <p id="modalText">
+
+                    Texto
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-logo">
+
+            K <span>♥</span> J
+
+        </div>
+
+        <p>
+
+            Feito com carinho para nós dois.
+
+        </p>
+
+        <small>
+
+            © 2026 • Kayron & Jyovânia
+
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
